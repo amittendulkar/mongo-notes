@@ -1,0 +1,18 @@
+* Connecting
+=mongo --host <hostname>:<port> <db>=
+* Create DB/Collection
+#+BEGIN_SRC sh
+# To list databases
+show dbs
+# To create DB
+use DBNAME
+# To create collection
+db.createCollection("NAME")
+#+END_SRC
+* Import/Export
+#+BEGIN_SRC sh
+# Export: this will create dump dir with DBNAME dir under it
+mongodump --host HOST --port PORT --db DBNAME
+# Import: The DBDIR should be generally same as DBNAME
+mongorestore --host HOST --port PORT --db DBNAME DBDIR
+#+END_SRC
